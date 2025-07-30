@@ -22,9 +22,15 @@ fi
 
 echo "✅ Compilation successful!"
 
-# Run tests with HTML reporting
+
+# Run tests with HTML reporting, optionally with tags
 echo "Running tests with HTML reporting..."
-mvn test
+if [ -n "$1" ]; then
+    echo "Running tests with tag: $1"
+    mvn test -Dtest.groups="$1"
+else
+    mvn test
+fi
 
 TEST_EXIT_CODE=$?
 

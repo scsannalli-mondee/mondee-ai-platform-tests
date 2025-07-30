@@ -1,6 +1,6 @@
-# Abhix API Test Suite
+# Mondee AI API Test Suite
 
-A comprehensive Java Maven project containing all Abhix-related API tests, built using Unirest for HTTP requests and JUnit for testing.
+A comprehensive Java Maven project containing all Abhi AI API tests, built using Unirest for HTTP requests and JUnit for testing.
 
 ## Prerequisites
 
@@ -49,11 +49,17 @@ A comprehensive Java Maven project containing all Abhix-related API tests, built
 ```bash
 mvn test
 ```
+or 
+```bash
+./run-tests.sh
+```
 
 ### Run by Tags
 ```bash
 # Run only smoke tests (core functionality)
 mvn test -Dtest.groups=smoke
+`or` 
+./run-tests.sh smoke
 
 # Run only regression tests (comprehensive testing)
 mvn test -Dtest.groups=regression
@@ -88,7 +94,7 @@ Test data files are located in `resources/data/` and organized by feature:
 
 ## Usage
 
-The test suite includes multiple API clients and utilities for testing various Abhix services. Key classes:
+The test suite includes multiple API clients and utilities for testing various AI Platform services. Key classes:
 
 - `ApiClient` - Main HTTP client for API interactions
 - `JsonFileReader` - Utility for loading test data from JSON files
