@@ -1,6 +1,6 @@
-# Mondee AI API Test Suite
+# Mondee AI Platform Test Suite
 
-A comprehensive Java Maven project containing all Abhi AI API tests, built using Unirest for HTTP requests and JUnit for testing.
+A comprehensive Java Maven project containing all Mondee AI API tests, built using Unirest for HTTP requests and JUnit for testing.
 
 ## Prerequisites
 
