@@ -1,0 +1,13 @@
+{
+    "merchantId": "135699500050",
+    "promptTitle": "extract_price_plan_inventory",
+    "requestParams": {
+        "description": "Relax & Refresh offers a rejuvenating experience that includes a nourishing Hair Serum Application, a soothing Scalp Massage, and a Cooling Eye Mask — all designed to help you unwind and recharge. Price: $99"
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_plan_inventory",
+        "team": ""
+    }
+}

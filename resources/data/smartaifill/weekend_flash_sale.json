@@ -1,0 +1,14 @@
+{
+    "merchantId": "135699500050",
+    "promptId": 1244,
+    "promptTitle": "extract_price_rules_inventory",
+    "requestParams": {
+        "description": "Weekend Flash Sale: Enjoy 15% off on adventure activities every Saturday and Sunday during July 2025. This promotional discount is automatically applied for weekend bookings and is valid only when inventory exceeds 75 units. Cannot be combined with other offers. Valid for individual travelers only."
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_rules_inventory",
+        "team": ""
+    }
+}

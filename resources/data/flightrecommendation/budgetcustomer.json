@@ -1,0 +1,90 @@
+{
+  "merchantId": "mondee1",
+  "modelName": "flight_recommendation",
+  "modelAlgorithm": "k-means & autoencoder",
+  "modelVersion": "v0",
+  "modelId": "123456",
+  "modelPath": "gs://mlops-purplegrid/mondee1/flight_segmentation/v0/0000-00-00_00-00-00",
+  "hyperParameters": {
+    "autoEncoder.numFeatures": 13,
+    "autoEncoder.hiddenDimension": 64,
+    "autoEncoder.latentDimension": 4,
+    "autoEncoder.nClusters": 4
+  },
+  "data": [
+    {
+      "flight_segmentation_payload": {
+        "modelName": "flight_segmentation",
+        "data": [
+          {
+            "Unique_id": "559d790fe45947f4b58404d08ffa8ce6",
+            "Airline_Name": "United Airlines",
+            "Date_of_Journey": "2025-02-21T23:15:00",
+            "Source": "SFO",
+            "Destination": "MNL",
+            "Airline": "UA",
+            "Route": "SFO-TPE,TPE-BLR,BLR-MNL",
+            "Booking_Class": "C",
+            "Cabin_Class": "E",
+            "Flight-Number": 853,
+            "Duration": 1895.0,
+            "Total_Stops": 2.0,
+            "Day_of_Week": 5,
+            "Seat_Availability": 4,
+            "Is_Weekend": 0,
+            "Is_Holiday_Period": 0,
+            "brands": [
+              {
+                "price": 9145.18,
+                "brandName": "BUSINESS FULLY REFUNDABLE,BUSINESS FULLY REFUNDABLE",
+                "fareId": "6697910067a347bdba61c2938a47cd19",
+                "refundable": true,
+                "cabin": "Business",
+                "carryOn": "0",
+                "checkIn": "0"
+              },
+              {
+                "price": 1007.2,
+                "brandName": "ECONOMY FULLY REFUNDABLE,ECONOMY FULLY REFUNDABLE",
+                "fareId": "2dcbde44f3d84f398d19d040905b6683",
+                "refundable": true,
+                "cabin": "Economy",
+                "carryOn": "0",
+                "checkIn": "0"
+              },
+              {
+                "price": 836.74,
+                "brandName": "ECONOMY,ECONOMY",
+                "fareId": "adcbffd1d66f40f0b1cedeabfedc291a",
+                "refundable": false,
+                "cabin": "Economy",
+                "carryOn": "0",
+                "checkIn": "0"
+              },
+              {
+                "price": 758.3399999999999,
+                "brandName": "ECONOMY NONCHANGEABLE,ECONOMY NONCHANGEABLE",
+                "fareId": "69f0ffa1025a477f8a4d713c923019d5",
+                "refundable": false,
+                "cabin": "Economy",
+                "carryOn": "0",
+                "checkIn": "0"
+              }
+            ],
+            "USD_Price": 9145.18,
+            "StarRating_Airline": "1.55",
+            "Flight_Distance_Miles": 7233.085611348025,
+            "LongLayOverFlight": 1.0,
+            "LayoverTime": [
+              10.75,60.75
+            ]
+          }
+        ]
+      },
+      "customer_data": {
+        "customer_id": "7e3e8e45-a69c-42c3-8eca-3caf99dd1ddf",
+        "traveler_id": "09717c26-f53f-4dab-8831-e99ec079a269"
+      }
+    }
+  ]
+}

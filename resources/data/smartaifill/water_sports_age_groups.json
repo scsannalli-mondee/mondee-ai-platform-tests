@@ -1,0 +1,13 @@
+{
+    "merchantId": "135699500050",
+    "promptTitle": "extract_price_plan_inventory",
+    "requestParams": {
+        "description": "Adventure Water Sports package includes Jet Skiing, Parasailing, and Banana Boat Ride. Adult price: ₹500, Child price (under 12): ₹800. All safety equipment included."
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_plan_inventory",
+        "team": ""
+    }
+}

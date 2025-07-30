@@ -1,0 +1,14 @@
+{
+    "merchantId": "135699500050",
+    "promptId": 1244,
+    "promptTitle": "extract_price_rules_inventory",
+    "requestParams": {
+        "description": "Early Bird Special: Get 25% off on all family packages when booking 30 days in advance. Valid for bookings made from March 1st to March 31st, 2025. This percentage discount applies to families with 2 adults and at least 1 child. Offer available while supplies last - limited to first 100 bookings."
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_rules_inventory",
+        "team": ""
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "media": [
+    {
+      "mediaType": "image/jpg",
+      "gcsurl": "gs://abhi-platform-dev-athena-main/uat-test-data/places/hyderabad/hyd-1.jpeg"
+    }
+  ]
+}

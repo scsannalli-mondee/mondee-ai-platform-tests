@@ -1,0 +1,13 @@
+{
+    "merchantId": "135699500050",
+    "promptTitle": "extract_price_plan_inventory",
+    "requestParams": {
+        "description": "Kerala Ayurveda Retreat offers authentic healing treatments including Traditional Panchakarma Therapy, Herbal Oil Massage, and Meditation Sessions. Experience wellness like never before. Price: ₹15,999 INR"
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_plan_inventory",
+        "team": ""
+    }
+}

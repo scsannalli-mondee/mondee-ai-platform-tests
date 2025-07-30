@@ -1,0 +1,20 @@
+{
+  "environment": "UAT",
+  "environments": {
+    "UAT": {
+      "base_url": "https://reel-builder.purplecloud.ai/api",
+      "experience_service_url": "https://abhiuat.tripproagencysites.com/",
+      "ai_services_url": "https://qaabhiapi1.mondee.com/aiservices/api/v1"
+    },
+    "PROD": {
+      "base_url": "https://prod.reel-builder.purplecloud.ai/api",
+      "experience_service_url": "https://prod.tripproagencysites.com/",
+      "ai_services_url": "https://abhiapi1.mondee.com/aiservices/api/v1"
+    }
+  },
+  "api_endpoints": {
+    "generate_video": "/generate-video",
+    "video_status": "/video-status/",
+    "execute_prompt": "/genAI/prompt/execute"
+  }
+}

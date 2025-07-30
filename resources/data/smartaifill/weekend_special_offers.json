@@ -1,0 +1,14 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1244,
+  "promptTitle": "extract_price_rules_inventory",
+  "requestParams": {
+    "description": "Weekend Special Offers: Get 20% off on all spa and wellness packages every Friday, Saturday, and Sunday throughout August 2025. This exclusive weekend discount is available for couples and individual bookings. Valid only when inventory is above 50 units. Cannot be combined with other promotional codes. Book now and save on your weekend getaway!"
+  },
+  "media": [],
+  "tags": {
+    "feature": "price-plan",
+    "promptName": "extract_price_rules_inventory",
+    "team": ""
+  }
+}

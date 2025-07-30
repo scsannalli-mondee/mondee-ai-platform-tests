@@ -1,0 +1,14 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1244,
+  "promptTitle": "extract_price_rules_inventory",
+  "requestParams": {
+    "description": "A Rainy Day Discount of $15 per adult will be automatically applied to all bookings made this weekend. This offer is valid only for adult participants and will be deducted from the total price during the specified date range. Exclusive offer if less than 50 items left in stock"
+  },
+  "media": [],
+  "tags": {
+    "feature": "price-plan",
+    "promptName": "extract_price_rules_inventory",
+    "team": ""
+  }
+}

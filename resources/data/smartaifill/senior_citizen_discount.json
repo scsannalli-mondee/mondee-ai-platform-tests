@@ -1,0 +1,14 @@
+{
+    "merchantId": "135699500050",
+    "promptId": 1244,
+    "promptTitle": "extract_price_rules_inventory",
+    "requestParams": {
+        "description": "Senior Citizen Discount: Citizens aged 65 and above receive a flat ₹200 discount on all tour packages. This offer is valid throughout the year and can be combined with other promotional offers. No booking limit - available for all senior travelers. Valid ID proof required at the time of travel."
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_rules_inventory",
+        "team": ""
+    }
+}

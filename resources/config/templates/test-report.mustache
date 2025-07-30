@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Execution Report</title>
+    <link rel="stylesheet" href="report-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test Execution Report</h1>
+            <p class="report-date">Generated on: {{reportGeneratedAt}}</p>
+        </header>
+
+        <section class="summary">
+            <h2>Test Summary</h2>
+            <div class="summary-cards">
+                <div class="card total">
+                    <h3>Total Tests</h3>
+                    <span class="number">{{totalTests}}</span>
+                </div>
+                <div class="card passed">
+                    <h3>Passed</h3>
+                    <span class="number">{{passedTests}}</span>
+                </div>
+                <div class="card failed">
+                    <h3>Failed</h3>
+                    <span class="number">{{failedTests}}</span>
+                </div>
+                <div class="card skipped">
+                    <h3>Skipped</h3>
+                    <span class="number">{{skippedTests}}</span>
+                </div>
+            </div>
+            <div class="summary-details">
+                <p><strong>Pass Rate:</strong> {{formattedPassRate}}</p>
+                <p><strong>Execution Time:</strong> {{executionTime}}</p>
+            </div>
+        </section>
+
+        <section class="test-results">
+            <h2>Test Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Class</th>
+                        <th>Status</th>
+                        <th>Start Time</th>
+                        <th>Duration</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#results}}
+                    <tr class="{{status}}">
+                        <td>{{testName}}</td>
+                        <td>{{className}}</td>
+                        <td><span class="status-badge {{status}}">{{status}}</span></td>
+                        <td>{{startTime}}</td>
+                        <td>{{duration}}</td>
+                        <td>
+                            <button class="details-btn" onclick="toggleDetails('{{className}}-{{testName}}')">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="{{className}}-{{testName}}-details" style="display: none;">
+                        <td colspan="6">
+                            <div class="test-details">
+                                {{#errorMessage}}
+                                <div class="error-section">
+                                    <h4>Error Message:</h4>
+                                    <pre>{{errorMessage}}</pre>
+                                </div>
+                                {{/errorMessage}}
+
+                                {{#logs}}
+                                {{#.}}
+                                <div class="logs-section">
+                                    <h4>Test Logs:</h4>
+                                    <pre class="logs">{{#logs}}{{.}}
+{{/logs}}</pre>
+                                </div>
+                                {{/.}}
+                                {{/logs}}
+
+                                <div class="test-data-section">
+                                    <h4>Test Data:</h4>
+                                    <pre class="test-data">{{#details}}{{#.}}{{@key}}: {{.}}
+{{/.}}{{/details}}</pre>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/results}}
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function toggleDetails(testId) {
+            const detailsRow = document.getElementById(testId + '-details');
+            if (detailsRow.style.display === 'none') {
+                detailsRow.style.display = 'table-row';
+            } else {
+                detailsRow.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

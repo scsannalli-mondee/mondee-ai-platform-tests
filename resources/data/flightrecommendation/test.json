@@ -1,0 +1,45 @@
+{
+    "results": [
+        {
+            "Unique_id": "559d790fe45947f4b58404d08ffa8ce6",
+            "Source": "SFO",
+            "Destination": "MNL",
+            "Duration": 1895.0,
+            "Total_Stops": 2.0,
+            "Date_of_Journey": "2025-02-21T23:15:00",
+            "StarRating_Airline": "1.55",
+            "Flight-Number": 853,
+            "Route": "SFO-TPE,TPE-BLR,BLR-MNL",
+            "brands": [
+                {
+                    "fareId": "6697910067a347bdba61c2938a47cd19",
+                    "price": 145.18,
+                    "brandName": "BUSINESS FULLY REFUNDABLE,BUSINESS FULLY REFUNDABLE",
+                    "cabin": "Business",
+                    "Reason": "The flight is affordably priced, offering Business class for added comfort"
+                },
+                {
+                    "fareId": "69f0ffa1025a477f8a4d713c923019d5",
+                    "price": 758.34,
+                    "brandName": "ECONOMY NONCHANGEABLE,ECONOMY NONCHANGEABLE",
+                    "cabin": "Economy",
+                    "Reason": "The flight is affordably priced, offering Economy class for budget-friendly travel"
+                },
+                {
+                    "fareId": "adcbffd1d66f40f0b1cedeabfedc291a",
+                    "price": 836.74,
+                    "brandName": "ECONOMY,ECONOMY",
+                    "cabin": "Premium",
+                    "Reason": "The flight is affordably priced"
+                },
+                {
+                    "fareId": "2dcbde44f3d84f398d19d040905b6683",
+                    "price": 1007.2,
+                    "brandName": "ECONOMY FULLY REFUNDABLE,ECONOMY FULLY REFUNDABLE",
+                    "cabin": "Economy",
+                    "Reason": "The flight is affordably priced, offering Economy class for budget-friendly travel"
+                }
+            ]
+        }
+    ]
+}

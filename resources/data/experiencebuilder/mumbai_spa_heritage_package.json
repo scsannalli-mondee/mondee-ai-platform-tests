@@ -1,0 +1,112 @@
+{
+  "channel": "PACKAGE",
+  "products": [
+    {
+      "productCatalogId": "8292ce6a9c814ddc9cf877097b90f9a3",
+      "caption": "Luxury Spa Services",
+      "summary": [
+        "Enjoy luxurious spa services. Choose from a wide variety of massages, beauty treatments and pampering services!"
+      ],
+      "type": "SERVICE",
+      "location": {
+        "uniqueTitle": "Mumbai",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            72.8320729,
+            18.9581934
+          ]
+        },
+        "additionalInfo": {
+          "inclusions": {
+            "title": "Inclusions",
+            "description": [
+              "This typically includes the back, neck, shoulders, arms, hands, legs, feet, and may also include the abdomen and face",
+              "Spas may offer massages focused on specific areas like the back, neck, shoulders, or feet"
+            ]
+          },
+          "exclusions": {
+            "title": "Exclusions",
+            "description": [
+              "Spas typically will not perform massages on clients with open cuts, abrasions, sores, or active infections."
+            ]
+          },
+          "cancellationPolicy": {
+            "title": "Cancellation Policy",
+            "description": [
+              "Most spas require 24 hours' notice for cancellations or rescheduling. Some may require 48 hours' notice, especially for group bookings or longer appointments",
+              "Late cancellations (within the notice period) may result in a fee, such as a percentage of the service price (e.g., 25%, 50%) or the full price. No-shows are also typically subject to fees",
+              "Some spas may have provisions for unexpected illness or emergencies. It's best to inquire about the specific policy at the spa you plan to visit"
+            ]
+          },
+          "termsAndConditions": {
+            "title": "Terms and Conditions",
+            "description": [
+              "Maintaining a peaceful and respectful environment is crucial. This includes keeping noise levels to a minimum and refraining from loud conversations",
+              "Treating therapists and other guests with courtesy and respect is essentialRespecting the privacy of other guests and maintaining appropriate modesty during treatments is expected"
+            ]
+          },
+          "other": {
+            "title": "Additional Info",
+            "description": [
+              "Spas often offer packages that combine several treatments for a more comprehensive experience. These packages can be tailored to different needs and budgets"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "productCatalogId": "d9728226ad6d4dca8ec3aea6939157f6",
+      "caption": "the iconic Chhatrapati Shivaji Terminus",
+      "summary": [
+        "Join us on a captivating heritage walk through one of Mumbai's most iconic landmarks — Chhatrapati Shivaji Terminus (CST), a UNESCO World Heritage Site and architectural marvel. This immersive experience takes you through the stunning Victorian Gothic Revival architecture, intricate carvings, stained glass windows, and the vibrant history that connects colonial legacy with modern-day Mumbai."
+      ],
+      "type": "SERVICE",
+      "location": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            18.9581934,
+            72.8320729
+          ]
+        }
+      },
+      "additionalInfo": {
+        "inclusions": {
+          "title": "Inclusions",
+          "description": [
+            "Capture the station's beauty from various angles, especially during the day and when illuminated at night.",
+            "Experience the bustling atmosphere of a major railway station and appreciate its role as a vital transportation hub",
+            "Step inside to admire the grand main hall with its stained-glass windows, soaring ceilings, and the iconic clock tower"
+          ]
+        },
+        "exclusions": {
+          "title": "Exclusions",
+          "description": [
+            "Some parts of the terminus, particularly those related to railway operations and security, may be restricted",
+            "During peak hours, especially during weekdays, the terminus can be very crowded. Visiting during off-peak hours (early morning or late evening) is recommended for a more relaxed experience"
+          ]
+        },
+        "cancellationPolicy": {
+          "title": "Cancellation Policy",
+          "description": [
+            "Many tour operators, like Viator and Tripadvisor, offer free cancellation up to 24 hours before the tour start time"
+          ]
+        },
+        "termsAndConditions": {
+          "title": "Terms and Conditions",
+          "description": [
+            "As with any crowded place, be vigilant about your belongings to prevent theft or loss",
+            "Adhere to any instructions provided by railway personnel or signage within the station."
+          ]
+        }
+      }
+    }
+  ]
+}

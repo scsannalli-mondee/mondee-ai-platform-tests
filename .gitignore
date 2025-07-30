@@ -23,6 +23,8 @@
 # Build artifacts
 build/
 dist/
+videos/
+target/
 
 # Local development
 *.local

@@ -1,0 +1,13 @@
+{
+    "merchantId": "135699500050",
+    "promptTitle": "extract_price_plan_inventory",
+    "requestParams": {
+        "description": "Mountain Bike Adventure Tour includes Professional Mountain Bike, Safety Helmet, Trail Guide, and Refreshments. Explore scenic mountain trails with expert guides. Duration: 4 hours. Price: $75 per person"
+    },
+    "media": [],
+    "tags": {
+        "feature": "price-plan",
+        "promptName": "extract_price_plan_inventory",
+        "team": ""
+    }
+}

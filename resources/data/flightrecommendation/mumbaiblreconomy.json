@@ -1,0 +1,81 @@
+{
+  "merchantId": "mondee1",
+  "modelName": "flight_recommendation",
+  "modelVersion": "v1",
+  "modelId": "A12345",
+  "modelPath": "gs://mlops-purplegrid/mondee1/flight_segmentation/v8/2025-05-01_15-15-10",
+  "hyperParameters": {
+    "chunk_size": 500,
+    "num_epochs": 10,
+    "num_features": 19,
+    "batch_size": 512,
+    "learning_rate": 0.001
+  },
+  "modelAlgorithm": "k-means & autoencoder",
+  "data": [
+    {
+      "customer_data": {
+        "customer_id": "7e3e8e45-a69c-42c3-8eca-3caf99dd1ddf",
+        "traveler_id": "c03b5ad6-c047-4b13-989e-cc1cd1312a50"
+      },
+      "flight_segmentation_payload": {
+        "data": [
+          {
+            "Unique_id": "2bc64748c92249e29c2da4a449634c6b",
+            "Airline_Name": "Air Canada",
+            "Date_of_Journey": "2025-04-22T14:05:00",
+            "Source": "ORD",
+            "Destination": "DXB",
+            "Airline": "AC",
+            "Route": "ORD-YYZ,YYZ-DXB",
+            "Booking_Class": "S",
+            "Cabin_Class": "E",
+            "Flight-Number": 504,
+            "Duration": 1240.0,
+            "Total_Stops": 1.0,
+            "Day_of_Week": 2,
+            "Seat_Availability": 9,
+            "Is_Weekend": 0,
+            "Is_Holiday_Period": 0,
+            "USD_Price": 16560.73,
+            "brands": [
+              {
+                "fareId": "123",
+                "price": 16560.73,
+                "brandName": "BUSINESS FLEXIBLE,BUSINESS FLEXIBLE",
+                "refundable": true,
+                "cabin": "Business",
+                "carryOn": "0",
+                "checkIn": "0"
+              },
+              {
+                "fareId": "1234",
+                "price": 4326.12,
+                "brandName": "BUSINESS LOWEST,BUSINESS LOWEST",
+                "refundable": false,
+                "cabin": "Business",
+                "carryOn": "0",
+                "checkIn": "0"
+              },
+              {
+                "fareId": "1235",
+                "price": 3448.73,
+                "brandName": "Latitude,Latitude",
+                "refundable": true,
+                "cabin": "Economy",
+                "carryOn": "0",
+                "checkIn": "0"
+              }
+            ],
+            "StarRating_Airline": "1.55",
+            "Flight_Distance_Miles": 7233.085611348025,
+            "LongLayOverFlight": 1,
+            "LayoverTime": [
+              10
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

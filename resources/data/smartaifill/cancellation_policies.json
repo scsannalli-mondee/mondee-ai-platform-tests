@@ -1,0 +1,14 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1245,
+  "promptTitle": "extract_policy_information_inventory_smart_fill",
+  "requestParams": {
+    "description": "Any Cancellation 24 hours Prior from the starting time of the trail - Full Refundable; ​Any Cancellation 12 hours Prior from the starting time of the trail - 50% Refund ; ​Any Cancellation after 12 hours from the starting time of the trail ; No Refund ​Rescheduling 12 hours prior - 50% Chargeable ​; No Rescheduling after 12 hours"
+  },
+  "media": [],
+  "tags": {
+    "feature": "price-plan",
+    "promptName": "extract_policy_information_inventory_smart_fill",
+    "team": ""
+  }
+}
