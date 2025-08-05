@@ -1,0 +1,16 @@
+{
+  "media": [
+    {
+      "gcsurl": "gs://abhi-platform-dev-athena-main/uat-test-data/LUX_Earthsong_and_Birdsong_Coorg_Brochure_e1ec9b0fde.pdf",
+      "cdnurl": ""
+    }
+  ],
+  "models": {
+    "responseCount": "10",
+    "maxDistanceInMeters": "5000"
+  },
+  "actions": {
+    "experienceCreate": "yes",
+    "returnFormat": "v1"
+  }
+}

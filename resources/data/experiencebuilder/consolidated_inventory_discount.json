@@ -1,0 +1,14 @@
+{
+  "merchantId": "135699500050",
+  "promptTitle": "extract_consolidated_inventory",
+  "requestParams": {
+    "description": "Relax & Refresh offers a rejuvenating experience that includes a nourishing Hair Serum Application, a soothing Scalp Massage, and a Cooling Eye Mask — all designed to help you unwind and recharge. Price: $99. There is a discount of 10% and will be automatically applied to all bookings made between july and august. This offer is valid only for adult participants and will be deducted from the total price during the specified date range.Full cancellation is allowed up to 24 hours before the experience for all age groups, with no penalty or deduction. 50 percent deduction if cancelled within 24 hours",
+    "date": "2025-07-30"
+  },
+  "media": [],
+  "tags": {
+    "feature": "price-plan",
+    "promptName": "extract_consolidated_inventory",
+    "team": ""
+  }
+}

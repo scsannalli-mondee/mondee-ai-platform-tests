@@ -126,6 +126,53 @@ public class ExperienceBuilderTests {
         System.out.println("Invalid request properly handled for: " + invalidPackageType);
     }
     
+
+    @ParameterizedTest
+    @ValueSource(strings = {"host_property_coorg_brochure"})
+    @DisplayName("Test Experience Builder - Create Experience with Host Properties")
+    @Tag("smoke")
+    @Tag("regression")
+    public void testCreateExperienceWithHostProperties(String hostPropertyDataFileName) throws IOException {
+        ApiClient client = new ApiClient();
+        String jsonBody = JsonFileReader.readJsonFile("experiencebuilder/" + hostPropertyDataFileName + ".json");
+        var response = client.createExperienceWithPackage(Constants.CREATE_EXPERIENCE_ENDPOINT, jsonBody);
+        
+        assertNotNull(response, "Experience builder response should not be null");
+        System.out.println("Experience created successfully for host property " + hostPropertyDataFileName + ": " + response);
+        
+        // Parse the response JSON
+        JsonObject responseObject = JsonParser.parseString(response.toString()).getAsJsonObject();
+        responseObject.addProperty("test_filename", hostPropertyDataFileName);
+        
+        // Validate basic response structure for host property
+        validateBasicResponseStructure(responseObject);
+        
+        // Perform specific validations for host property test cases
+        performHostPropertySpecificValidations(hostPropertyDataFileName, responseObject);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"consolidated_inventory_discount"})
+    @DisplayName("Test Experience Builder - Create Experience with Consolidated Inventory Discount")
+    @Tag("smoke")
+    @Tag("regression")
+    public void testCreateExperienceWithConsolidatedInventoryDiscount(String dataFileName) throws IOException {
+        ApiClient client = new ApiClient();
+        String jsonBody = JsonFileReader.readJsonFile("experiencebuilder/" + dataFileName + ".json");
+        var response = client.createExperienceWithPackage(Constants.CREATE_EXPERIENCE_ENDPOINT, jsonBody);
+        
+        assertNotNull(response, "Experience builder response should not be null");
+        System.out.println("Experience created successfully for consolidated inventory discount " + dataFileName + ": " + response);
+        
+        // Parse the response JSON
+        JsonObject responseObject = JsonParser.parseString(response.toString()).getAsJsonObject();
+        responseObject.addProperty("test_filename", dataFileName);
+        
+        // Validate basic response structure
+        validateBasicResponseStructure(responseObject);
+        // Optionally add more validations for discount/cancellation logic here
+    }
+
     @ParameterizedTest
     @ValueSource(strings = {"invalid_empty_service", "invalid_missing_description", "invalid_malformed_service_json", "invalid_wrong_channel"})
     @DisplayName("Test Experience Builder - Negative Cases for Service Bad Requests")
@@ -294,6 +341,15 @@ public class ExperienceBuilderTests {
         // Add more specific validations for other service types as needed
     }
     
+    private void performHostPropertySpecificValidations(String hostPropertyDataFileName, JsonObject response) {
+        System.out.println("Performing host property specific validations for " + hostPropertyDataFileName);
+        
+        if (hostPropertyDataFileName.contains("coorg_brochure")) {
+            validateCoorgBrochureResponse(response);
+        }
+        // Add more specific validations for other host property types as needed
+    }
+    
     private void validateMumbaiExperienceResponse(JsonObject response) {
         JsonObject experienceJson = response.getAsJsonObject("experiencejson");
         
@@ -380,5 +436,41 @@ public class ExperienceBuilderTests {
         assertTrue(experienceTypes.size() > 0, "Experience should have at least one type");
         
         System.out.println("Mumbai wedding photography validation passed successfully");
+    }
+    
+    private void validateCoorgBrochureResponse(JsonObject response) {
+        JsonObject experienceJson = response.getAsJsonObject("experiencejson");
+        
+        // Validate location contains Coorg or Karnataka
+        JsonObject location = experienceJson.getAsJsonObject("location");
+        String city = location.get("city").getAsString().toLowerCase();
+        String state = location.has("state") ? location.get("state").getAsString().toLowerCase() : "";
+        assertTrue(city.contains("coorg") || city.contains("kodagu") || state.contains("karnataka"), 
+                  "Experience location should be in Coorg/Kodagu, Karnataka");
+        assertTrue(location.get("country").getAsString().equalsIgnoreCase("India"), 
+                  "Experience country should be India");
+        
+        // Validate the caption contains meaningful text
+        String caption = experienceJson.get("caption").getAsString();
+        assertFalse(caption.isEmpty(), "Caption should not be empty");
+        
+        // Validate summary contains relevant terms
+        JsonArray summary = experienceJson.getAsJsonArray("summary");
+        String summaryText = summary.toString().toLowerCase();
+        assertTrue(summaryText.contains("coorg") || summaryText.contains("nature") || 
+                   summaryText.contains("resort") || summaryText.contains("luxury") ||
+                   summaryText.contains("earthsong") || summaryText.contains("birdsong"),
+                   "Summary should mention Coorg, nature, resort, luxury or property-specific themes");
+        
+        // Validate that the plan contains activities
+        assertTrue(experienceJson.has("plan"), "Experience should have a plan");
+        JsonArray plan = experienceJson.getAsJsonArray("plan");
+        assertTrue(plan.size() > 0, "Plan should contain at least one day");
+        
+        // Validate experience types are relevant for host property
+        JsonArray experienceTypes = experienceJson.getAsJsonArray("experienceTypes");
+        assertTrue(experienceTypes.size() > 0, "Experience should have at least one type");
+        
+        System.out.println("Coorg brochure host property validation passed successfully");
     }
 }
