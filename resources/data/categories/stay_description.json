@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "Stay",
+    "description": "Experience luxury in the heart of Rajasthan at this heritage palace hotel in Udaipur. Stay in beautifully restored royal suites overlooking Lake Pichola, enjoy world-class spa treatments, and dine like royalty with traditional Rajasthani cuisine. This 18th-century palace offers modern amenities while preserving its historic charm and cultural significance.",
+    "s_tag": "True"
+  }
+}

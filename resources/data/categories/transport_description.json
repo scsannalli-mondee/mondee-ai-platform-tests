@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "Transport",
+    "description": "Experience luxury travel aboard the Palace on Wheels, India's most famous luxury train. Journey through Rajasthan's royal cities in restored vintage coaches featuring modern amenities, fine dining, and personalized service. This 7-day rail journey covers Jaipur, Udaipur, Jaisalmer, and Agra with guided excursions and cultural experiences at each destination.",
+    "s_tag": "True"
+  }
+}

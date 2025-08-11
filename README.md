@@ -75,8 +75,13 @@ mvn test -Dtest=ExperienceBuilderTests
 
 # Run Price Plan tests
 mvn test -Dtest=PricePlanRulesExtractionTests
-```
 
+
+# To run the specific test method 
+ 
+```bash
+mvn test -Dtest="com.experienceCategoriesTests.ExperienceCategoriesTests#testGenerateExperienceCategories"
+ 
 ## Test Reports
 
 After running tests, reports are generated in two locations:

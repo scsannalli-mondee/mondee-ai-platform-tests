@@ -104,7 +104,6 @@ public class ApiClient {
 
     public Object executeAIPrompt(String endpoint, String jsonBody) {
         try {
-            System.out.println("Posting AI prompt request: " + jsonBody);
             String fullUrl = aiServicesUrl + endpoint;
             System.out.println("Full URL: " + fullUrl);
             HttpResponse<JsonNode> response = Unirest.post(fullUrl)

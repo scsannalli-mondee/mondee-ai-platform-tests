@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "Activity",
+    "description": "Experience the thrill of whitewater rafting on the Ganges River near Rishikesh. Navigate through Grade III and IV rapids while surrounded by the stunning Himalayan foothills. This adrenaline-pumping adventure includes professional guides, safety equipment, and breathtaking views of the sacred river. Perfect for adventure seekers looking for an unforgettable outdoor experience.",
+    "s_tag": "True"
+  }
+}

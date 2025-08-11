@@ -18,6 +18,15 @@
 
 # Environment files
 *.env
+
+# Prevent empty files from being tracked
+**/*empty*
+**/empty_*
+
+# VS Code generated files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
 .env.*
 
 # Build artifacts
@@ -30,3 +39,7 @@ target/
 *.local
 *.bak
 *.tmp
+
+# other resources
+src/test/resources/
+src/main/resources/

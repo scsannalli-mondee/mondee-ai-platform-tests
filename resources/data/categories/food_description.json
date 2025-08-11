@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "Food",
+    "description": "Embark on a culinary journey through Old Delhi's famous food streets. Taste authentic street food including paranthas at Paranthe Wali Gali, lassi at a 100-year-old shop, and mouth-watering chaats and kebabs. Learn about the history and traditions behind each dish from local food experts while exploring the bustling lanes of Chandni Chowk.",
+    "s_tag": "True"
+  }
+}

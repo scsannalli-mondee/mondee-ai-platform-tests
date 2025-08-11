@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "Attraction",
+    "description": "Visit the breathtaking Meenakshi Amman Temple in Madurai, one of India's most magnificent temple complexes. Marvel at the intricate Dravidian architecture, colorful gopurams (towers), and thousands of hand-carved sculptures. Witness the evening ceremony and learn about the temple's 2500-year history and its significance in Tamil culture and Hindu traditions.",
+    "s_tag": "True"
+  }
+}
