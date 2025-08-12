@@ -118,6 +118,13 @@
                     <perCoreThreadCount>true</perCoreThreadCount>
                     <reportFormat>xml</reportFormat>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <!-- Enhanced reporting configuration -->
+                    <trimStackTrace>false</trimStackTrace>
+                    <printSummary>true</printSummary>
+                    <disableXmlReport>false</disableXmlReport>
+                    <testFailureIgnore>true</testFailureIgnore> <!-- Continue execution even when tests fail -->
+                    <forkCount>1</forkCount>
+                    <reuseForks>true</reuseForks>
                     <!-- Tag-based test execution configuration -->
                     <groups>${test.groups}</groups>
                     <excludedGroups>${test.excludedGroups}</excludedGroups>
@@ -127,6 +134,8 @@
                             junit.jupiter.execution.parallel.enabled=true
                             junit.jupiter.execution.parallel.mode.default=concurrent
                             junit.jupiter.execution.parallel.config.strategy=dynamic
+                            junit.jupiter.displayname.generator.default=org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
+                            junit.jupiter.params.displayname.default={displayName} - {arguments}
                         </configurationParameters>
                     </properties>
                 </configuration>
@@ -137,8 +146,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>3.2.3</version>
+                <configuration>
+                    <showSuccess>true</showSuccess>
+                    <linkXRef>false</linkXRef>
+                    <aggregate>true</aggregate>
+                    <reportsDirectories>
+                        <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    </reportsDirectories>
+                </configuration>
                 <executions>
                     <execution>
+                        <id>generate-test-report</id>
                         <phase>test</phase>
                         <goals>
                             <goal>report-only</goal>
@@ -146,6 +164,51 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <!-- Maven Site Plugin for generating site with reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.12.1</version>
+            </plugin>
+            
+            <!-- Exec Maven Plugin to run enhanced report generator -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-enhanced-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.utils.EnhancedTestReportGenerator</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/surefire-reports</argument>
+                                <argument>${project.build.directory}/enhanced-reports</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+    
+    <!-- Reporting Section for HTML Reports -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <showSuccess>true</showSuccess>
+                    <linkXRef>false</linkXRef>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>

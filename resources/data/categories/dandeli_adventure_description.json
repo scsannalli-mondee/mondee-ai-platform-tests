@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Dandeli offers a diverse range of experiences, particularly for those seeking adventure and nature. It's renowned for its white-water rafting on the Kali River, jungle safaris, and opportunities to spot wildlife like black panthers and elephants. You can also explore caves, enjoy trekking, and indulge in watersports like kayaking.",
+    "s_tag": "True"
+  }
+}

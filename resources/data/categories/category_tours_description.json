@@ -3,7 +3,7 @@
   "promptId": 1221,
   "promptTitle": "GenerateCategories",
   "requestParams": {
-    "experienceCategory": "Tours",
+     "experienceCategory": "",
     "description": "Explore the architectural wonders of the Golden Triangle with expert guides. Visit the iconic Taj Mahal at sunrise, discover the rich history of Red Fort and Jama Masjid in Delhi, and explore the pink city of Jaipur including Amber Fort and City Palace. This comprehensive tour includes transportation, professional guides, and cultural insights into India's Mughal heritage.",
     "s_tag": "True"
   }

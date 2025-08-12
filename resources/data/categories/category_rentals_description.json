@@ -3,7 +3,7 @@
   "promptId": 1221,
   "promptTitle": "GenerateCategories",
   "requestParams": {
-    "experienceCategory": "Rentals",
+    "experienceCategory": "",
     "description": "Rent a classic Royal Enfield motorcycle and explore the scenic mountain roads of Himachal Pradesh. Experience the freedom of the open road as you navigate through pine forests, mountain passes, and charming hill stations. Includes helmet, basic maintenance support, and suggested routes for an authentic motorcycle adventure in the Himalayas.",
     "s_tag": "True"
   }

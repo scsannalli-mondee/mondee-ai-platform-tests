@@ -3,7 +3,7 @@
   "promptId": 1221,
   "promptTitle": "GenerateCategories",
   "requestParams": {
-    "experienceCategory": "Service",
+    "experienceCategory": "",
     "description": "Indulge in a traditional Ayurvedic wellness retreat in Kerala. Experience authentic panchakarma treatments, personalized yoga sessions, meditation guidance, and organic herbal cuisine. Expert Ayurvedic doctors create customized treatment plans for detoxification, stress relief, and overall well-being in a serene backwater setting surrounded by tropical nature.",
     "s_tag": "True"
   }

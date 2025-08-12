@@ -103,35 +103,59 @@ public class ApiClient {
     }
 
     public Object executeAIPrompt(String endpoint, String jsonBody) {
-        try {
-            String fullUrl = aiServicesUrl + endpoint;
-            System.out.println("Full URL: " + fullUrl);
-            HttpResponse<JsonNode> response = Unirest.post(fullUrl)
-                .header("Content-Type", "application/json")
-                .body(jsonBody)
-                .asJson();
+        int maxRetries = 2;
+        int retryCount = 0;
+        System.out.println("Executing AI prompt: " + endpoint + " with body: " + jsonBody);
+        while (retryCount <= maxRetries) {
+            try {
+                String fullUrl = aiServicesUrl + endpoint;
+                System.out.println("Full URL: " + fullUrl + " (Attempt " + (retryCount + 1) + "/" + (maxRetries + 1) + ")");
+                
+                HttpResponse<JsonNode> response = Unirest.post(fullUrl)
+                    .header("Content-Type", "application/json")
+                    .body(jsonBody)
+                    .socketTimeout(120000) // 2 minutes socket timeout
+                    .connectTimeout(30000) // 30 seconds connection timeout
+                    .asJson();
 
-            System.out.println("Response code: " + response.getStatus());
-            
-            JsonNode body = response.getBody();
-            if (body != null) {
-                String responseStr;
-                if (body.getObject() != null) {
-                    responseStr = body.getObject().toString();
-                } else if (body.getArray() != null) {
-                    responseStr = body.getArray().toString();
+                System.out.println("Response code: " + response.getStatus());
+                
+                JsonNode body = response.getBody();
+                if (body != null) {
+                    String responseStr;
+                    if (body.getObject() != null) {
+                        responseStr = body.getObject().toString();
+                    } else if (body.getArray() != null) {
+                        responseStr = body.getArray().toString();
+                    } else {
+                        responseStr = body.toString();
+                    }
+                    System.out.println("AI Prompt Response: " + responseStr);
+                    return responseStr;
                 } else {
-                    responseStr = body.toString();
+                    System.out.println("Response body is null");
+                    return "Response body is null - Status: " + response.getStatus();
                 }
-                System.out.println("AI Prompt Response: " + responseStr);
-                return responseStr;
-            } else {
-                System.out.println("Response body is null");
-                return "Response body is null - Status: " + response.getStatus();
+            } catch (Exception e) {
+                retryCount++;
+                System.out.println("Attempt " + retryCount + " failed: " + e.getMessage());
+                
+                if (retryCount > maxRetries) {
+                    System.out.println("Max retries exceeded. Failing test.");
+                    throw new RuntimeException("Failed to execute AI prompt after " + (maxRetries + 1) + " attempts: " + e.getMessage(), e);
+                }
+                
+                try {
+                    System.out.println("Waiting 5 seconds before retry...");
+                    Thread.sleep(5000); // Wait 5 seconds before retry
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    throw new RuntimeException("Interrupted during retry wait", ie);
+                }
             }
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute AI prompt: " + e.getMessage(), e);
         }
+        
+        throw new RuntimeException("Unexpected error in executeAIPrompt");
     }
 
     public Object generateFlightRecommendation(String string, String jsonBody) {

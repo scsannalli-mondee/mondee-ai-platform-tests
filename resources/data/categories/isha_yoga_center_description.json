@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "The Isha Yoga Center, located in Coimbatore, India, is a renowned spiritual center founded by Sadhguru. It's a place for self-transformation, offering various yoga and meditation programs, and is home to the world-renowned Adiyogi Shiva statue. The center is situated on 150 acres of lush land at the foothills of the Velliangiri Mountains.",
+    "s_tag": "True"
+  }
+}

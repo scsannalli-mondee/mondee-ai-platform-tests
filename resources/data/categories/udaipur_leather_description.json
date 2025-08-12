@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+     "experienceCategory": "",
+    "description": "Udaipur is known for its rich artistic heritage, including leather crafting. Leather Art & Craft in Udaipur City, for example, has been a prominent name in the field since 1980, offering a variety of leather goods like bags, wallets, and belts. The business is located near Bhattiyani Chhota, close to Hotel Raj Palace. Udaipur Leather Art, an online store, also specializes in handmade leather products, emphasizing craftsmanship and quality.",
+    "s_tag": "True"
+  }
+}

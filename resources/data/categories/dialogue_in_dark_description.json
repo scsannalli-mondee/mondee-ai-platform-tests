@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Dialogue in the Dark Hyderabad is a unique dining and social experience where visitors are guided through a completely dark environment by visually impaired individuals. This immersive experience aims to promote empathy and understanding of the visually impaired community while heightening the other senses through a \"Taste of Darkness\" dining concept. The experience includes navigating a specially designed space, interacting with others in the dark, and enjoying a meal where taste and smell are emphasized.",
+    "s_tag": "True"
+  }
+}
