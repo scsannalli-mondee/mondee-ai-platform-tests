@@ -110,7 +110,7 @@ public class ApiClient {
             try {
                 String fullUrl = aiServicesUrl + endpoint;
                 System.out.println("Full URL: " + fullUrl + " (Attempt " + (retryCount + 1) + "/" + (maxRetries + 1) + ")");
-                
+                // System.out.println("Request body: " + jsonBody);
                 HttpResponse<JsonNode> response = Unirest.post(fullUrl)
                     .header("Content-Type", "application/json")
                     .body(jsonBody)
@@ -121,6 +121,7 @@ public class ApiClient {
                 System.out.println("Response code: " + response.getStatus());
                 
                 JsonNode body = response.getBody();
+
                 if (body != null) {
                     String responseStr;
                     if (body.getObject() != null) {

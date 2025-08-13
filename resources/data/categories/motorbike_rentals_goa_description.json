@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Rent high-quality motorbikes and scooters to explore the scenic beauty of Goa at your own pace. Choose from a fleet of well-maintained bikes including Royal Enfield classics, sporty motorcycles, and comfortable scooters. Perfect for beach hopping, visiting spice plantations, and discovering hidden gems along coastal roads.",
+    "s_tag": "[False]"
+  }
+}

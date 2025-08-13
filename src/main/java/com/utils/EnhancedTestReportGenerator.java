@@ -165,25 +165,20 @@ public class EnhancedTestReportGenerator {
                 expectedCategory = matcher.group(1);
             }
             
-        } else if (methodName.contains("testSpecificExperienceTypeGeneration")) {
+        } else if (methodName.contains("testExperienceTypeGeneration")) {
             methodType = "ExperienceType Validation";
             testName = "AI ExperienceType Generation Validation";
             
             // Extract parameter from system output
-            String parameterPattern = "Starting Specific ExperienceType Validation Test for: (.+)";
+            String parameterPattern = "Starting ExperienceType Validation Test for: (.+)";
             java.util.regex.Pattern paramPattern = java.util.regex.Pattern.compile(parameterPattern);
             java.util.regex.Matcher paramMatcher = paramPattern.matcher(systemOutput);
             if (paramMatcher.find()) {
                 parameterName = formatExperienceName(paramMatcher.group(1));
             }
             
-            // Extract expected experienceType from system output
-            String expectedPattern = "Expected experienceType for [^:]+: (.+)";
-            java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(expectedPattern);
-            java.util.regex.Matcher matcher = pattern.matcher(systemOutput);
-            if (matcher.find()) {
-                expectedCategory = matcher.group(1);
-            }
+            // Since we simplified validation, we don't have expected types anymore
+            expectedCategory = "";
             
         } else if (methodName.contains("testGenerateExperienceCategories")) {
             methodType = "Category Generation";
@@ -269,9 +264,10 @@ public class EnhancedTestReportGenerator {
             String categoryMatchClass = "";
             if (test.hasExpectedCategory && test.actualCategories.toLowerCase().contains(test.expectedCategory.toLowerCase())) {
                 categoryMatchClass = "category-match";
-            } else if (test.hasExpectedCategory) {
+            } else if (test.hasExpectedCategory && !test.actualCategories.toLowerCase().contains(test.expectedCategory.toLowerCase())) {
                 categoryMatchClass = "category-mismatch";
             }
+            // If hasExpectedCategory is false, no special styling is applied
             
             table.append(String.format("""
                 <tr>

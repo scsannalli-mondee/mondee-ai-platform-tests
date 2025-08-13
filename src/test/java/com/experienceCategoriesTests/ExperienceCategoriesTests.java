@@ -6,6 +6,7 @@ import com.utils.JsonFileReader;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonArray;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -26,15 +27,15 @@ public class ExperienceCategoriesTests {
 
     @ParameterizedTest(name = "Generate Categories by category type: {0}")
     @ValueSource(strings = { 
-        // "Activity",
-    //  "Events", 
-    //  "Stay", 
-    //  "Food", 
+        "Activity",
+     "Events", 
+     "Stay", 
+     "Food", 
      "Tours", 
-    //  "Attraction", 
-    //  "Rentals", 
-    //  "Transport",
-    //  "Service" 
+     "Attraction", 
+     "Rentals", 
+     "Transport",
+     "Service" 
     })
     // @ValueSource(strings = { "events"})
     @Tag("smoke")
@@ -191,8 +192,9 @@ public class ExperienceCategoriesTests {
     private String validateExperienceTypes(String categoryJsonString, JsonElement experienceCategoryElement, 
                                        JsonElement experienceTypesElement, String testContext) {
         try {
-            // Parse the category hierarchy
-            JsonObject categoryHierarchy = JsonParser.parseString(categoryJsonString).getAsJsonObject();
+            // Parse the category hierarchy - it's an array with one object containing all categories
+            JsonArray categoryArray = JsonParser.parseString(categoryJsonString).getAsJsonArray();
+            JsonObject categoryHierarchy = categoryArray.get(0).getAsJsonObject();
             
             // Get all valid experienceTypes for the generated experienceCategories
             Set<String> validExperienceTypes = new HashSet<>();
@@ -212,7 +214,14 @@ public class ExperienceCategoriesTests {
             
             for (JsonElement experienceTypeElement : experienceTypesElement.getAsJsonArray()) {
                 String experienceType = experienceTypeElement.getAsString();
-                if (!validExperienceTypes.contains(experienceType)) {
+                
+                // Check if this is a main category name (which is invalid)
+                if (categoryHierarchy.has(experienceType)) {
+                    hasErrors = true;
+                    validationErrors.append(String.format(
+                        "  ❌ '%s' is a main category, not a valid experienceType. Expected sub-categories like: %s%n",
+                        experienceType, validExperienceTypes));
+                } else if (!validExperienceTypes.contains(experienceType)) {
                     hasErrors = true;
                     validationErrors.append(String.format(
                         "  ❌ experienceType '%s' is not a valid sub-category of %s. Valid types: %s%n",

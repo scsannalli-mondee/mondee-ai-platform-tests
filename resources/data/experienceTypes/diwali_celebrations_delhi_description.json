@@ -1,13 +1,10 @@
 {
-  "experienceType": "Events",
-  "experience": {
-    "title": "Diwali Celebrations in Delhi",
-    "description": "Experience the grandeur of Diwali, the Festival of Lights, in Delhi with spectacular fireworks displays, beautifully illuminated markets, and traditional celebrations. Visit decorated temples, participate in rangoli making, enjoy festive sweets, and witness the magical transformation of the city with millions of diyas and lights.",
-    "location": "Delhi"
-  },
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
   "requestParams": {
-    "experienceTitle": "Diwali Celebrations in Delhi",
-    "experienceDescription": "Experience the grandeur of Diwali, the Festival of Lights, in Delhi with spectacular fireworks displays, beautifully illuminated markets, and traditional celebrations. Visit decorated temples, participate in rangoli making, enjoy festive sweets, and witness the magical transformation of the city with millions of diyas and lights.",
-    "experienceLocation": "Delhi"
+    "experienceCategory": "",
+    "description": "Experience the grandeur of Diwali, the Festival of Lights, in Delhi with spectacular fireworks displays, beautifully illuminated markets, and traditional celebrations. Visit decorated temples, participate in rangoli making, enjoy festive sweets, and witness the magical transformation of the city with millions of diyas and lights.",
+    "s_tag": "[False]"
   }
 }

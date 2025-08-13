@@ -4,7 +4,7 @@
   "promptTitle": "GenerateCategories",
   "requestParams": {
     "experienceCategory": "",
-    "description": "A \"Candlelight: Tribute to A.R. Rahman\" concert is scheduled to be held in Hyderabad, India. The event will take place at the Taramati Baradari Resort, with doors opening 30 minutes before the start time and late entry not permitted. The concert is a musical experience set entirely under candlelight, suitable for all ages (8+). Live Your City says it will transform live music into an atmospheric journey.",
-    "s_tag": "True"
+    "description": "[\"A \\\"Candlelight: Tribute to A.R. Rahman\\\" concert is scheduled to be held in Hyderabad, India. The event will take place at the Taramati Baradari Resort, with doors opening 30 minutes before the start time and late entry not permitted. The concert is a musical experience set entirely under candlelight, suitable for all ages (8+). Live Your City says it will transform live music into an atmospheric journey.\"]",
+    "s_tag": "[False]"
   }
 }

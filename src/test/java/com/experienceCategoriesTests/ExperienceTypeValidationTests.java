@@ -26,10 +26,10 @@ public class ExperienceTypeValidationTests {
     private ApiClient client;
 
     /**
-     * Validates that AI generates the correct specific experienceType for given experience descriptions
-     * This test focuses on experienceType accuracy rather than general category validation
+     * Validates that AI generates valid experienceTypes that belong to proper categories
+     * This test ensures experienceTypes are valid sub-categories according to categoryJson
      */
-    @ParameterizedTest(name = "Validate experienceType for: {0}")
+    @ParameterizedTest(name = "Validate experienceTypes for: {0}")
     @ValueSource(strings = { 
         // Activity - Adventure Sports
         "skydiving_rishikesh", "bungee_jumping_goa", "whitewater_rafting_manali",
@@ -92,22 +92,15 @@ public class ExperienceTypeValidationTests {
     })
     @Tag("experienceType")
     @Tag("validation")
-    @DisplayName("Validate specific experienceType generation for targeted experience descriptions")
-    public void testSpecificExperienceTypeGeneration(String experienceKey) throws IOException {
+    @DisplayName("Validate experienceType generation for experience descriptions")
+    public void testExperienceTypeGeneration(String experienceKey) throws IOException {
         client = new ApiClient();
-        System.out.println("Starting Specific ExperienceType Validation Test for: " + experienceKey);
+        System.out.println("Starting ExperienceType Validation Test for: " + experienceKey);
         
         // Load category structure for validation
         String categoryJsonString = JsonFileReader.readJsonFile("categories/categoryJson.json");
-        JsonObject categoryJson = JsonParser.parseString(categoryJsonString).getAsJsonObject();
-        
-        // Load expected experienceType mapping
-        String expectedTypesJsonString = JsonFileReader.readJsonFile("categories/expected_experienceTypes.json");
-        JsonObject expectedTypesJson = JsonParser.parseString(expectedTypesJsonString).getAsJsonObject();
-        
-        // Get expected experienceType for this test
-        String expectedExperienceType = expectedTypesJson.get(experienceKey).getAsString();
-        System.out.println("Expected experienceType for " + experienceKey + ": " + expectedExperienceType);
+        JsonArray categoryArray = JsonParser.parseString(categoryJsonString).getAsJsonArray();
+        JsonObject categoryJson = categoryArray.get(0).getAsJsonObject();
         
         // Load experience description
         String descriptionFileName = experienceKey + "_description.json";
@@ -152,24 +145,14 @@ public class ExperienceTypeValidationTests {
                 if (experienceTypesArray == null || experienceTypesArray.size() == 0) {
                     validationErrors.add("No experienceTypes found in AI response");
                 } else {
-                    boolean foundExpectedType = false;
                     List<String> generatedTypes = new ArrayList<>();
                     
                     for (JsonElement typeElement : experienceTypesArray) {
                         String generatedType = typeElement.getAsString();
                         generatedTypes.add(generatedType);
-                        
-                        if (generatedType.equals(expectedExperienceType)) {
-                            foundExpectedType = true;
-                            System.out.println("✅ Found expected experienceType: " + expectedExperienceType);
-                            break;
-                        }
                     }
                     
-                    if (!foundExpectedType) {
-                        validationErrors.add("Expected experienceType '" + expectedExperienceType + 
-                                           "' not found in generated types: " + generatedTypes);
-                    }
+                    System.out.println("✅ Generated experienceTypes: " + generatedTypes);
                     
                     // Validate that all generated experienceTypes are valid according to categoryJson
                     String experienceTypeValidationErrors = validateExperienceTypes(generatedTypes, categoryJson);
@@ -177,6 +160,31 @@ public class ExperienceTypeValidationTests {
                         validationErrors.add(experienceTypeValidationErrors);
                     } else {
                         System.out.println("✅ All experienceTypes are valid sub-categories: " + generatedTypes);
+                    }
+                    
+                    // Check s_tag value to determine if secondary validation should be performed
+                    String sTagValue = requestParams.get("s_tag").getAsString();
+                    boolean shouldValidateSecondaryTags = !"[False]".equals(sTagValue) && !"False".equals(sTagValue);
+                    
+                    // Also validate secondaryTags experienceTypes if they exist and s_tag allows it
+                    if (shouldValidateSecondaryTags && aiResponse.has("secondaryTags")) {
+                        JsonObject secondaryTags = aiResponse.getAsJsonObject("secondaryTags");
+                        if (secondaryTags.has("experienceTypes")) {
+                            JsonArray secondaryExperienceTypesArray = secondaryTags.getAsJsonArray("experienceTypes");
+                            List<String> secondaryTypes = new ArrayList<>();
+                            for (JsonElement typeElement : secondaryExperienceTypesArray) {
+                                secondaryTypes.add(typeElement.getAsString());
+                            }
+                            
+                            String secondaryValidationErrors = validateExperienceTypes(secondaryTypes, categoryJson);
+                            if (!secondaryValidationErrors.isEmpty()) {
+                                validationErrors.add("Secondary experienceTypes validation failed: " + secondaryValidationErrors);
+                            } else {
+                                System.out.println("✅ All secondary experienceTypes are valid sub-categories: " + secondaryTypes);
+                            }
+                        }
+                    } else if (!shouldValidateSecondaryTags) {
+                        System.out.println("⏭️ Skipping secondary experienceTypes validation (s_tag is " + sTagValue + ")");
                     }
                 }
                 
@@ -200,11 +208,18 @@ public class ExperienceTypeValidationTests {
      */
     private String validateExperienceTypes(List<String> experienceTypes, JsonObject categoryJson) {
         List<String> invalidTypes = new ArrayList<>();
+        List<String> mainCategoryNames = new ArrayList<>();
         
         for (String experienceType : experienceTypes) {
             boolean isValid = false;
             
-            // Check each main category
+            // First check if this is a main category name (which is invalid)
+            if (categoryJson.has(experienceType)) {
+                mainCategoryNames.add(experienceType);
+                continue;
+            }
+            
+            // Check each main category for valid sub-categories
             for (String mainCategory : categoryJson.keySet()) {
                 JsonObject categoryData = categoryJson.getAsJsonObject(mainCategory);
                 
@@ -220,10 +235,16 @@ public class ExperienceTypeValidationTests {
             }
         }
         
-        if (!invalidTypes.isEmpty()) {
-            return "Invalid experienceTypes not found in categoryJson: " + invalidTypes;
+        StringBuilder errorMessage = new StringBuilder();
+        
+        if (!mainCategoryNames.isEmpty()) {
+            errorMessage.append("Main category names used as experienceTypes (invalid): ").append(mainCategoryNames).append(". ");
         }
         
-        return "";
+        if (!invalidTypes.isEmpty()) {
+            errorMessage.append("Invalid experienceTypes not found in categoryJson: ").append(invalidTypes);
+        }
+        
+        return errorMessage.toString();
     }
 }

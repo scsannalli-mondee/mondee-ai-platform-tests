@@ -1,13 +1,10 @@
 {
-  "experienceType": "Activity",
-  "experience": {
-    "title": "Whitewater Rafting in Manali",
-    "description": "Navigate the rushing rapids of the Beas River on an exciting whitewater rafting expedition in Manali. Experience Grade II to IV rapids as you paddle through stunning Himalayan landscapes, with snow-capped peaks and pine forests as your backdrop. Professional guides provide safety briefing and equipment for this thrilling water adventure.",
-    "location": "Manali, Himachal Pradesh"
-  },
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
   "requestParams": {
-    "experienceTitle": "Whitewater Rafting in Manali",
-    "experienceDescription": "Navigate the rushing rapids of the Beas River on an exciting whitewater rafting expedition in Manali. Experience Grade II to IV rapids as you paddle through stunning Himalayan landscapes, with snow-capped peaks and pine forests as your backdrop. Professional guides provide safety briefing and equipment for this thrilling water adventure.",
-    "experienceLocation": "Manali, Himachal Pradesh"
+    "experienceCategory": "",
+    "description": "[\"Navigate the rushing rapids of the Beas River on an exciting whitewater rafting expedition in Manali. Experience Grade II to IV rapids as you paddle through stunning Himalayan landscapes, with snow-capped peaks and pine forests as your backdrop. Professional guides provide safety briefing and equipment for this thrilling water adventure.\"]",
+    "s_tag": "[False]"
   }
 }

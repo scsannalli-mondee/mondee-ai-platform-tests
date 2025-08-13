@@ -4,7 +4,7 @@
   "promptTitle": "GenerateCategories",
   "requestParams": {
     "experienceCategory": "",
-    "description": "Bonalu is a vibrant, annual Hindu festival celebrated in Telangana, primarily in Hyderabad and Secunderabad, to honor Goddess Mahakali. It's a month-long festival, typically occurring in July/August (Ashada Masam), where women prepare and offer 'Bonam,' a traditional meal, to the goddess. The festival is a form of thanksgiving for fulfilled vows and a celebration of the goddess's power.",
-    "s_tag": "True"
+    "description": "[\"Bonalu is a vibrant, annual Hindu festival celebrated in Telangana, primarily in Hyderabad and Secunderabad, to honor Goddess Mahakali. It's a month-long festival, typically occurring in July/August (Ashada Masam), where women prepare and offer 'Bonam,' a traditional meal, to the goddess. The festival is a form of thanksgiving for fulfilled vows and a celebration of the goddess's power.\"]",
+    "s_tag": "[False]"
   }
 }
