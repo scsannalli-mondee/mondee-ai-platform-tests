@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Experience authentic rural life by staying with local farming families in traditional village homes. Participate in daily farm activities, learn traditional crafts, and enjoy home-cooked meals prepared with fresh farm ingredients. Includes cultural exchanges and local craft workshops.",
+    "s_tag": "True"
+  }
+}

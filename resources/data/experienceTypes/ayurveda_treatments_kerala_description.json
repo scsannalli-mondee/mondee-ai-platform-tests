@@ -1,0 +1,13 @@
+{
+  "experienceType": "Activity",
+  "experience": {
+    "title": "Authentic Ayurveda Treatments in Kerala",
+    "description": "Experience traditional Ayurvedic healing with personalized treatments in Kerala's renowned wellness centers. Enjoy therapeutic massages, herbal steam baths, Panchakarma detoxification, and consultations with Ayurvedic doctors. Treatments use ancient herbs and oils to balance your doshas and promote holistic well-being.",
+    "location": "Kerala"
+  },
+  "requestParams": {
+    "experienceTitle": "Authentic Ayurveda Treatments in Kerala",
+    "experienceDescription": "Experience traditional Ayurvedic healing with personalized treatments in Kerala's renowned wellness centers. Enjoy therapeutic massages, herbal steam baths, Panchakarma detoxification, and consultations with Ayurvedic doctors. Treatments use ancient herbs and oils to balance your doshas and promote holistic well-being.",
+    "experienceLocation": "Kerala"
+  }
+}

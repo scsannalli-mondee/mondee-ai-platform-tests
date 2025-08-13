@@ -1,0 +1,13 @@
+{
+  "experienceType": "Activity",
+  "experience": {
+    "title": "Meditation Centers in Dharamshala",
+    "description": "Find inner peace at meditation centers in Dharamshala, the spiritual home of the Dalai Lama. Participate in guided meditation sessions, mindfulness practices, and Buddhist teachings in serene mountain settings. Learn various meditation techniques including Vipassana, Tibetan Buddhist meditation, and walking meditation among peaceful monasteries.",
+    "location": "Dharamshala, Himachal Pradesh"
+  },
+  "requestParams": {
+    "experienceTitle": "Meditation Centers in Dharamshala",
+    "experienceDescription": "Find inner peace at meditation centers in Dharamshala, the spiritual home of the Dalai Lama. Participate in guided meditation sessions, mindfulness practices, and Buddhist teachings in serene mountain settings. Learn various meditation techniques including Vipassana, Tibetan Buddhist meditation, and walking meditation among peaceful monasteries.",
+    "experienceLocation": "Dharamshala, Himachal Pradesh"
+  }
+}

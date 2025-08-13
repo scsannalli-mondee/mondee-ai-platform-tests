@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Enhanced walking tour services with premium audio guides, professional photography, weather-ready gear rental, refreshment packages, souvenir shopping credits, and local artifact demonstrations for immersive cultural exploration.",
+    "s_tag": "True"
+  }
+}

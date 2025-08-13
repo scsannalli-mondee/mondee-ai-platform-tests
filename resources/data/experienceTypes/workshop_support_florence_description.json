@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Comprehensive workshop services including pre-measured material kits, premium tool rentals, one-on-one mentoring, extended studio access, and take-home supply packages. Perfect for pottery, woodworking, jewelry making, and other creative pursuits.",
+    "s_tag": "True"
+  }
+}

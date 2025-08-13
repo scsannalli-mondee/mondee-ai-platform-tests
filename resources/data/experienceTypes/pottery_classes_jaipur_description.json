@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Learn the ancient art of pottery making in the Pink City of Jaipur. Join skilled artisans in their traditional workshops where you'll master the potter's wheel, shape clay with your hands, and create beautiful ceramic pieces. This hands-on workshop includes glazing techniques, firing processes, and the opportunity to take home your handmade creations.",
+    "s_tag": "True"
+  }
+}

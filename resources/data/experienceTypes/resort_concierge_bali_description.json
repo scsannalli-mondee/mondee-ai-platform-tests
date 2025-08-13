@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Premium resort concierge services including private villa dining, couples spa treatments, personal fitness training, luxury cabana rentals, and 24/7 butler service. Enjoy personalized attention and exclusive amenities throughout your stay.",
+    "s_tag": "True"
+  }
+}

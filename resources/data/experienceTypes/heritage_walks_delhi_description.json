@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Explore Delhi's rich cultural heritage through guided walking tours of historic neighborhoods like Old Delhi, Chandni Chowk, and Mehrauli. Discover ancient monuments, traditional bazaars, Mughal architecture, colonial buildings, and hidden gems while learning about the city's fascinating history from expert local guides.",
+    "s_tag": "True"
+  }
+}

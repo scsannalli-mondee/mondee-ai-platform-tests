@@ -105,7 +105,7 @@ public class ApiClient {
     public Object executeAIPrompt(String endpoint, String jsonBody) {
         int maxRetries = 2;
         int retryCount = 0;
-        System.out.println("Executing AI prompt: " + endpoint + " with body: " + jsonBody);
+        // System.out.println("Executing AI prompt: " + endpoint + " with body: " + jsonBody);
         while (retryCount <= maxRetries) {
             try {
                 String fullUrl = aiServicesUrl + endpoint;

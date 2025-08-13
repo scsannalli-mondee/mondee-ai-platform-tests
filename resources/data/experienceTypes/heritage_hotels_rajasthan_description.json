@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Stay in magnificent heritage hotels that were once royal palaces and forts in Rajasthan. Experience regal hospitality with opulent suites, courtyards with fountains, traditional Rajasthani architecture, and world-class amenities. Enjoy cultural performances, royal dining experiences, and personalized service that reflects the grandeur of India's royal heritage.",
+    "s_tag": "True"
+  }
+}

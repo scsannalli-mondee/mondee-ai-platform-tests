@@ -72,7 +72,7 @@ public class EnhancedTestReportGenerator {
                 Element testSuite = (Element) testSuites.item(i);
                 String className = testSuite.getAttribute("name");
                 
-                if (className.contains("ExperienceCategoriesTests")) {
+                if (className.contains("ExperienceCategoriesTests") || className.contains("ExperienceTypeValidationTests")) {
                     List<TestExecutionDetail> testDetails = extractTestDetails(testSuite);
                     allTestDetails.addAll(testDetails);
                     
@@ -159,6 +159,26 @@ public class EnhancedTestReportGenerator {
             
             // Extract expected category from system output
             String expectedPattern = "Expected category for [^:]+: (.+)";
+            java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(expectedPattern);
+            java.util.regex.Matcher matcher = pattern.matcher(systemOutput);
+            if (matcher.find()) {
+                expectedCategory = matcher.group(1);
+            }
+            
+        } else if (methodName.contains("testSpecificExperienceTypeGeneration")) {
+            methodType = "ExperienceType Validation";
+            testName = "AI ExperienceType Generation Validation";
+            
+            // Extract parameter from system output
+            String parameterPattern = "Starting Specific ExperienceType Validation Test for: (.+)";
+            java.util.regex.Pattern paramPattern = java.util.regex.Pattern.compile(parameterPattern);
+            java.util.regex.Matcher paramMatcher = paramPattern.matcher(systemOutput);
+            if (paramMatcher.find()) {
+                parameterName = formatExperienceName(paramMatcher.group(1));
+            }
+            
+            // Extract expected experienceType from system output
+            String expectedPattern = "Expected experienceType for [^:]+: (.+)";
             java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(expectedPattern);
             java.util.regex.Matcher matcher = pattern.matcher(systemOutput);
             if (matcher.find()) {

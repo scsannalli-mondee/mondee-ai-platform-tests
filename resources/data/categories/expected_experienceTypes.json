@@ -1,0 +1,85 @@
+{
+  "_comment": "Mapping of experience keys to their expected specific experienceTypes for validation",
+  
+  "_Activity_Adventure_Sports": "Adventure Sports experienceTypes",
+  "skydiving_rishikesh": "Adventure Sports",
+  "bungee_jumping_goa": "Adventure Sports", 
+  "whitewater_rafting_manali": "Adventure Sports",
+  
+  "_Activity_Creative_Workshops": "Creative Workshops experienceTypes",
+  "pottery_classes_jaipur": "Creative Workshops",
+  "cooking_classes_kerala": "Creative Workshops",
+  "dance_workshops_bangalore": "Creative Workshops",
+  
+  "_Activity_Health_Wellness": "Health & Wellness experienceTypes",
+  "yoga_retreats_goa": "Health & Wellness",
+  "ayurveda_treatments_kerala": "Health & Wellness",
+  "meditation_centers_dharamshala": "Health & Wellness",
+  
+  "_Events_Festivals": "Festivals experienceTypes",
+  "holi_festival_mathura": "Festivals",
+  "diwali_celebrations_delhi": "Festivals",
+  
+  "_Stay_Boutique_Lodgings": "Boutique Lodgings experienceTypes",
+  "heritage_hotels_rajasthan": "Boutique Lodgings",
+  
+  "_Stay_Eco_Stays": "Eco-Stays experienceTypes",
+  "treehouse_lodge_costa_rica": "Eco-Stays",
+  
+  "_Stay_Farm_Stays": "Farm Stays experienceTypes",
+  "farmstay_provence": "Farm Stays",
+  
+  "_Tours_Cultural_Tours": "Cultural Tours experienceTypes",
+  "heritage_walks_delhi": "Cultural Tours",
+  
+  "_Tours_Nature_Wildlife": "Nature & Wildlife Tours experienceTypes",
+  "wildlife_safari_kenya": "Nature & Wildlife Tours",
+  
+  "_Tours_Cycling_Tours": "Cycling Tours experienceTypes",
+  "cycling_tour_ireland": "Cycling Tours",
+  
+  "_Attraction_Historical_Sites": "Historical Sites experienceTypes",
+  "ancient_temples_tamil_nadu": "Historical Sites",
+  
+  "_Attraction_Natural_Attractions": "Natural Attractions experienceTypes",
+  "natural_park_iceland": "Natural Attractions",
+  
+  "_Attraction_Museums_Galleries": "Museums & Galleries experienceTypes",
+  "art_museum_tokyo": "Museums & Galleries",
+  
+  "_Rentals_Vehicle_Rentals": "Vehicle Rentals experienceTypes",
+  "motorbike_rentals_goa": "Vehicle Rentals",
+  
+  "_Rentals_Adventure_Gear": "Adventure Gear Rentals experienceTypes",
+  "camping_gear_rockies": "Adventure Gear Rentals",
+  
+  "_Rentals_Water_Rentals": "Water Rentals experienceTypes", 
+  "yacht_rental_mediterranean": "Water Rentals",
+  
+  "_Food_Food_Tastings": "Food Tastings experienceTypes",
+  "wine_tasting_napa": "Food Tastings",
+  
+  "_Food_Dining_Experiences": "Dining Experiences experienceTypes",
+  "family_dinner_tuscany": "Dining Experiences",
+  
+  "_Food_Food_Workshops": "Food Workshops experienceTypes",
+  "bread_making_paris": "Food Workshops",
+  
+  "_Transport_Scenic_Train_Rides": "Scenic Train Rides experienceTypes",
+  "scenic_train_switzerland": "Scenic Train Rides",
+  
+  "_Transport_Ferries": "Ferries experienceTypes",
+  "island_ferry_maldives": "Ferries",
+  
+  "_Transport_Private_Drivers": "Private Drivers experienceTypes",
+  "private_driver_dubai": "Private Drivers",
+  
+  "_Service_Resorts": "Resorts experienceTypes",
+  "resort_concierge_bali": "Resorts",
+  
+  "_Service_Workshop_Hobby": "Workshop / Hobby Based Class experienceTypes",
+  "workshop_support_florence": "Workshop / Hobby Based Class",
+  
+  "_Service_Walking_Tours": "Walking Tours experienceTypes",
+  "walking_tour_support_rome": "Walking Tours"
+}

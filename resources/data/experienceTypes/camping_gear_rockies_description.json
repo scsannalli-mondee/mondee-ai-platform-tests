@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Rent premium camping equipment including weatherproof tents, sleeping bags, cooking gear, and outdoor furniture for multi-day wilderness adventures. All equipment is professionally maintained and includes setup guides and 24/7 support during rental period.",
+    "s_tag": "True"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "experienceType": "Activity",
+  "experience": {
+    "title": "Bungee Jumping Adventure in Goa",
+    "description": "Take a leap of faith with an exhilarating bungee jumping experience in Goa. Jump from a 200-foot platform overlooking lush valleys and experience the ultimate rush of free-falling before the bungee cord rebounds you back up. Professional safety equipment and certified instructors ensure a safe yet thrilling adventure for adrenaline seekers.",
+    "location": "Goa"
+  },
+  "requestParams": {
+    "experienceTitle": "Bungee Jumping Adventure in Goa",
+    "experienceDescription": "Take a leap of faith with an exhilarating bungee jumping experience in Goa. Jump from a 200-foot platform overlooking lush valleys and experience the ultimate rush of free-falling before the bungee cord rebounds you back up. Professional safety equipment and certified instructors ensure a safe yet thrilling adventure for adrenaline seekers.",
+    "experienceLocation": "Goa"
+  }
+}

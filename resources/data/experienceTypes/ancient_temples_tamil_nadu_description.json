@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Visit the magnificent ancient temples of Tamil Nadu, including the Brihadeeswarar Temple in Thanjavur, Meenakshi Temple in Madurai, and shore temples of Mamallapuram. Marvel at intricate Dravidian architecture, stone carvings, towering gopurams, and learn about centuries-old religious traditions and cultural heritage.",
+    "s_tag": "True"
+  }
+}

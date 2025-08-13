@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Master the art of bread making in this hands-on workshop led by expert bakers. Learn traditional techniques for creating artisanal sourdough, whole grain breads, and specialty pastries. Includes all ingredients, equipment use, and take-home freshly baked goods plus starter kit.",
+    "s_tag": "True"
+  }
+}

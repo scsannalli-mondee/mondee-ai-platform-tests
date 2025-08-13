@@ -1,0 +1,13 @@
+{
+  "experienceType": "Activity",
+  "experience": {
+    "title": "Classical Dance Workshops in Bangalore",
+    "description": "Immerse yourself in the graceful world of Indian classical dance with workshops in Bharatanatyam, Kathak, or Kuchipudi in Bangalore. Learn basic postures, hand gestures (mudras), facial expressions, and rhythmic movements under the guidance of accomplished dance masters. Perfect for beginners and those seeking cultural immersion.",
+    "location": "Bangalore, Karnataka"
+  },
+  "requestParams": {
+    "experienceTitle": "Classical Dance Workshops in Bangalore",
+    "experienceDescription": "Immerse yourself in the graceful world of Indian classical dance with workshops in Bharatanatyam, Kathak, or Kuchipudi in Bangalore. Learn basic postures, hand gestures (mudras), facial expressions, and rhythmic movements under the guidance of accomplished dance masters. Perfect for beginners and those seeking cultural immersion.",
+    "experienceLocation": "Bangalore, Karnataka"
+  }
+}

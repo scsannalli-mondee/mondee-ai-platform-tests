@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Immerse yourself in world-class art collections featuring contemporary masterpieces, sculptures, and multimedia installations. Includes guided tours by art historians, exclusive access to private collections, and interactive workshops with local artists.",
+    "s_tag": "True"
+  }
+}

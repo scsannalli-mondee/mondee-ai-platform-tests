@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Discover magnificent waterfalls, crystal caves, and dramatic rock formations in this natural wonderland. Features hiking trails, guided geological tours, and opportunities for swimming in natural pools surrounded by pristine wilderness.",
+    "s_tag": "True"
+  }
+}

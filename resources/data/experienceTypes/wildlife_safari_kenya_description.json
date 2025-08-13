@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Embark on a thrilling wildlife safari through pristine national parks to observe elephants, lions, leopards, and diverse bird species in their natural habitat. Led by expert naturalist guides with game drives, bush walks, and conservation education sessions.",
+    "s_tag": "True"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "experienceType": "Activity",
+  "experience": {
+    "title": "Traditional Cooking Classes in Kerala",
+    "description": "Learn to prepare authentic Kerala cuisine in a traditional cooking class led by local chefs. Master the art of making coconut-based curries, fish molee, appam, and puttu while discovering the secrets of Kerala spices. This hands-on workshop includes a visit to spice gardens, market tour, and a delicious meal of your prepared dishes.",
+    "location": "Kerala"
+  },
+  "requestParams": {
+    "experienceTitle": "Traditional Cooking Classes in Kerala",
+    "experienceDescription": "Learn to prepare authentic Kerala cuisine in a traditional cooking class led by local chefs. Master the art of making coconut-based curries, fish molee, appam, and puttu while discovering the secrets of Kerala spices. This hands-on workshop includes a visit to spice gardens, market tour, and a delicious meal of your prepared dishes.",
+    "experienceLocation": "Kerala"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "merchantId": "135699500050",
+  "promptId": 1221,
+  "promptTitle": "GenerateCategories",
+  "requestParams": {
+    "experienceCategory": "",
+    "description": "Experience the ultimate adrenaline rush with tandem skydiving over the scenic landscapes of Rishikesh. Jump from 10,000 feet and enjoy breathtaking views of the Ganges River, lush forests, and the majestic Himalayas. Professional instructors ensure safety while you experience the thrill of free-falling at 120 mph before your parachute opens for a peaceful descent.",
+    "s_tag": "True"
+  }
+}
